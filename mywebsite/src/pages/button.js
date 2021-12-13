@@ -2,7 +2,8 @@ import React, { useState } from "react";
 
 
 function Button({ Mycomponent, cmpName }) {
-    const [currState, setcurrState] = useState();
+    const [currState, setcurrState] = useState([]);
+
 
     function buttonClicked() {
         setcurrState(!currState);

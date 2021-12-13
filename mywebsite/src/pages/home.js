@@ -1,12 +1,11 @@
 import React from "react";
 
-
-export default Home() {
-
+function Home() {
     return (
         <>
-
-
+            <p>This is a component</p>
+            <p>text</p>
         </>
-    )
+    );
 }
+export default Home;

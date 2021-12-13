@@ -1,16 +1,7 @@
 import React, { useState } from "react";
 
-function Home() {
-    return (
-        <>
-            <p>This is a component</p>
-            <p>text</p>
-        </>
-    );
-}
 
-
-function Button({ Mycomponent }) {
+function Button({ Mycomponent, cmpName }) {
     const [currState, setcurrState] = useState();
 
     function buttonClicked() {
@@ -20,9 +11,14 @@ function Button({ Mycomponent }) {
 
     return (
         <>
-            <button onClick={buttonClicked}>{"<>"}</button>
-            {(currState && <>{Mycomponent}</>) || (!currState && <p>...</p >)}
-            <p>{"</>"}</p>
+            {currState ?
+                <>
+                    <button onClick={buttonClicked}>{"<" + cmpName + ">"}</button>
+                    {Mycomponent}
+                    <button onClick={buttonClicked}>{"<" + cmpName + "/>"}</button>
+                </>
+                : <button onClick={buttonClicked}>{"<" + cmpName + ">...<" + cmpName + "/>"}</button>}
+
         </>
     )
 }

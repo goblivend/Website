@@ -11,7 +11,7 @@ function App() {
       <Header />
       <h1 className="text-blue-400 font-extrabold">Hello World!</h1>
       <p className="tracking-widest">This is my first React App.</p>
-      <Button Mycompenent={<Home />} />
+      <Button Mycomponent={<Home />} cmpName="Home" />
     </>
   );
 }

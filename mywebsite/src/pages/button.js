@@ -11,7 +11,7 @@ function Button({ Mycomponent, cmpName }) {
     }
 
     return (
-        <div>
+        <div id={cmpName}>
             {currState ?
                 <>
                     <button onClick={buttonClicked}>{"<" + cmpName + ">"}</button>

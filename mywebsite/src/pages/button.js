@@ -10,7 +10,7 @@ function Button({ Mycomponent, cmpName }) {
     }
 
     return (
-        <>
+        <div>
             {currState ?
                 <>
                     <button onClick={buttonClicked}>{"<" + cmpName + ">"}</button>
@@ -19,7 +19,7 @@ function Button({ Mycomponent, cmpName }) {
                 </>
                 : <button onClick={buttonClicked}>{"<" + cmpName + ">...<" + cmpName + "/>"}</button>}
 
-        </>
+        </div>
     )
 }
 

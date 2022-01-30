@@ -4,10 +4,6 @@ import React, { useState } from "react";
 function Button({ Mycomponent, cmpName, indent }) {
     const [currState, setcurrState] = useState([]);
 
-    let indentation = ''
-    for (let i = 0; i < indent; i++)
-        indentation += '&nbsp;'
-    console.log('"' + indentation + '"')
     function buttonClicked() {
         setcurrState(!currState);
         console.log(currState)
